@@ -1,0 +1,10 @@
+# config/routes.yaml
+by_beer:
+  path: /food
+  defaults: { _controller: 'App\Controller\SearchBeerController::searchBeerByFood' }
+  methods: [GET]
+
+beer_detail:
+  path: /show/{id}
+  controller: App\Infrastructure\Controller\ShowBeerController::show
+  methods: [ GET ]
